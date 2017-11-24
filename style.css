@@ -1,0 +1,118 @@
+body{
+	background-image: url(bckgrnd.jpeg);
+	background-size: 100%;
+	color: #FFFFFF;
+}
+h3{
+	font-size: 1.25em;
+}
+h4{
+	text-align: center;
+}
+footer{
+	grid-area: footer;
+	justify-self: center;
+}
+img{
+	width: 80px;
+}
+img:hover{
+	opacity: 0.5;
+}
+.title{
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-top: 1px solid;
+	border-radius: 47px 22px 0px 0px;
+	background-size: 100%;
+	background: rgb(75, 100, 100);
+    background: rgba(75, 100, 100, .5);
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 1px;
+}
+li{
+	padding: 0;
+	margin: 0;
+}
+dt{
+	text-decoration: underline;
+	margin-top: 20px;
+}
+dd{
+	padding: 1px;
+}
+.description{
+	font-weight: bold;
+}
+.location{
+	font-style: italic;
+	font-size: 12px;
+}
+.location:hover{
+	font-style: normal;
+}
+.container{
+	font-family: 'Spectral SC', serif;
+	width: 75%;
+	box-sizing: border-box;
+	margin: 0 auto;
+	border: 2px solid white;
+	border-radius: 75px 25px 0px 25px;
+	box-shadow: 5px 5px 5px black;
+	padding: 15px;
+	background: rgb(54, 25, 25);
+    background: rgba(54, 25, 25, .5);
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 2fr 0.1fr;
+	grid-template-areas: 
+		"personal_data personal_data personal_data"
+		"experiences education skills"
+		"footer footer footer";
+	grid-gap: 5px;
+}
+@media (max-width: 600px){
+	.container{
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+		"personal_data"
+		"experiences"
+		"education"
+		"skills";
+	}
+	body{
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+.personal_data{
+	grid-area: personal_data;
+	justify-self: center;
+	text-align: center;
+
+}
+.info{
+	border: 2px solid white;
+	border-radius: 50px 25px 0px 25px;
+	box-shadow: 5px 5px 5px black;
+}
+.experiences{
+	grid-area: experiences;
+	background: rgb(25, 100, 100);
+    background: rgba(25, 100, 100, .5);
+
+}
+.education{
+	grid-area: education;
+	background: rgb(108, 25, 100);
+    background: rgba(108, 25, 100, .5);
+}
+.skills{
+	grid-area: skills;
+	background: rgb(108, 100, 25);
+    background: rgba(108, 100, 25, .5);
+}
